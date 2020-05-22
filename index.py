@@ -14,7 +14,7 @@ def req(q):
  return xhr.responseText
 #######################
 show('''название теста:
-<form name="tni" onsubmit="name_h();function sleep(milliseconds) {const date = Date.now();let currentDate = null;do {currentDate = Date.now();} while (currentDate - date < milliseconds);};return false">
+<form name="tni" onsubmit="name_h();sleep(3);return false">
 <input type="text" name="tn">
 <button type="submit">открыть</button>
 </form>
@@ -25,5 +25,6 @@ def name_h():
  a=req('./'+q)
  alert('text'+a)
 ################################
-%*</script></body></html>
+%*
+function sleep(milliseconds) {const date = Date.now();let currentDate = null;do {currentDate = Date.now();} while (currentDate - date < milliseconds);}</script></body></html>
 *%
