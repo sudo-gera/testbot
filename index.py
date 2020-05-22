@@ -3,11 +3,11 @@
 def show(q,e='main'):
  document.getElementById(e).innerHTML=q
 def req(q):
- return 'l'
  xhr = new XMLHttpRequest()
  xhr.open('GET', q)
  xhr.responseType='text'
  req.overrideMimeType('text\/plain; charset=x-user-defined')
+ return 'l'
  alert(q)
  xhr.send()
  if xhr.status!=200:
