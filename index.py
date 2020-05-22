@@ -6,6 +6,7 @@ def req(q):
  xhr = new XMLHttpRequest()
  xhr.open('GET', q)
  xhr.responseType='text'
+ req.overrideMimeType('text\/plain; charset=x-user-defined')
  alert(q)
  xhr.send()
  if xhr.status!=200:
