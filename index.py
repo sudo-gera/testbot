@@ -1,4 +1,4 @@
-%*<html><head></head><body><div id="main">enable javascript support</div><script id="scr">
+%*<html><head></head><body><a href='javascript: document.location.href = "./?q="+Math.random();'>refresh</a><div id="main">enable javascript support</div><script id="scr">
 *%
 def show(q,e='main'):
  document.getElementById(e).innerHTML=q
