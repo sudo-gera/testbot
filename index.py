@@ -3,6 +3,7 @@
 def show(q,e='main'):
  document.getElementById(e).innerHTML=q
 def req(q):
+ return 'l'
  xhr = new XMLHttpRequest()
  xhr.open('GET', q)
  xhr.responseType='text'
