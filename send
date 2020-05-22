@@ -1,1 +1,1 @@
-python3 ../easyscript/easyscript -c -node -brtg index.py && cp index.html index.tmp && (git show | head -n 3 | tail -n 1 && cat index.tmp) > index.html && rm index.tmp &&  git commit -am "send" && git push
+python3 ../easyscript/easyscript -c -node -brtg index.py && git commit -am "send" && cp index.html index.tmp && (git show | head -n 3 | tail -n 1 && cat index.tmp) > index.html && rm index.tmp &&  git commit -am "send" && git push
