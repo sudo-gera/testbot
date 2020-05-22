@@ -14,7 +14,7 @@ def req(q):
  return xhr.responseText
 #######################
 show('''название теста:
-<form name="tni" onsubmit="name_h();sleep(3);return false">
+<form name="tni" onsubmit="name_h();sleep(3000);return false">
 <input type="text" name="tn">
 <button type="submit">открыть</button>
 </form>
