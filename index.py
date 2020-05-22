@@ -7,7 +7,6 @@ def req(q):
  xhr.open('GET', q)
  xhr.responseType='text'
  req.overrideMimeType('text\/plain; charset=x-user-defined')
- return 'l'
  alert(q)
  xhr.send()
  if xhr.status!=200:
@@ -15,7 +14,7 @@ def req(q):
  return xhr.responseText
 #######################
 show('''название теста:
-<form name="tni" onsubmit="name_h();return false">
+<form name="tni" onsubmit="name_h();function sleep(milliseconds) {const date = Date.now();let currentDate = null;do {currentDate = Date.now();} while (currentDate - date < milliseconds);};return false">
 <input type="text" name="tn">
 <button type="submit">открыть</button>
 </form>
