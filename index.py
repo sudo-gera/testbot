@@ -15,10 +15,6 @@ show('''название теста:
 <input type="text" name="tn">
 <button type="submit">открыть</button>
 </form>
-<form name="reg_form" onsubmit="reg_h();return false">
-<input type="text" name="token">
-<button type="submit">start</button>
-</form>
 <div id="ct"></div>
 ''')
 def name_h():
