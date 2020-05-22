@@ -5,6 +5,7 @@ def show(q,e='main'):
 def req(q):
  xhr = new XMLHttpRequest()
  xhr.open('GET', q)
+ alert(q)
  xhr.send()
  if xhr.status!=200:
   alert('error '+xhr.status+': '+xhr.statusText)
