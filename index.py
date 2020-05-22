@@ -6,6 +6,8 @@ def req(q):
  xhr = new XMLHttpRequest()
  xhr.open('GET', q)
  xhr.send()
+ if xhr.status!=200:
+  alert('error '+xhr.status+': '+xhr.statusText)
  return xhr.responseText
 #######################
 show('''название теста:
