@@ -22,7 +22,7 @@ show('''название теста:
 def name_h():
  q=document.forms.tni.elements.tn.value
  a=req('./'+q)
- show(a,'ct')
+ alert(a)
 ################################
 %*</script></body></html>
 *%
