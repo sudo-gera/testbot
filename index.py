@@ -132,10 +132,17 @@ def tlis():
  return val.split(',').length>2
  })
  v=Math.floor(Math.random()*a.length)
- if a[v].indexOf(';')!=-1:
-  a=a[v].split(';')
+ a=a[v]
+ a=a.split('')
+ for w<a.length
+  c=a[w].charCodeAt(0)>127
+  if c>127 and c<256:
+   c+=848
+  a[w]=String.fromCharCode(c)
+ if a.indexOf(';')!=-1:
+  a=a.split(';')
  else:
-  a=a[v].split(',')
+  a=a.split(',')
  d=[]
  while d.length==0:
   for 2=w<a.length:
