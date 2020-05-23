@@ -126,7 +126,7 @@ def tlis():
  a=cont.split('\n')
  a=a.filter(function(val,ind,arr){return val.split(',').length>2})
  v=Math.floor(Math.random()*a.length)
- if ';' in a[v]:
+ if a[v].indexOf(';')!=-1:
   a=a[v].split(';')
  else:
   a=a[v].split(',')
