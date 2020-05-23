@@ -139,6 +139,7 @@ def tlis():
   if c>127 and c<256:
    c+=848
   a[w]=String.fromCharCode(c)
+ a=a.join('')
  if a.indexOf(';')!=-1:
   a=a.split(';')
  else:
