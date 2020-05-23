@@ -123,8 +123,14 @@ def name_h():
  a=fet('./'+q)
  show('подожди')
 def tlis():
- a=cont.split('\n')
- a=a.filter(function(val,ind,arr){return val.split(',').length>2})
+ a=cont
+ a=a.replace('\r','\n')
+ a=a.split('\n')
+ a=a.filter(function(val,ind,arr){
+ if val.indexOf(';')!=-1:
+  return val.split(';').length>2
+ return val.split(',').length>2
+ })
  v=Math.floor(Math.random()*a.length)
  if a[v].indexOf(';')!=-1:
   a=a[v].split(';')
