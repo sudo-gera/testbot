@@ -134,7 +134,8 @@ def tlis():
  v=Math.floor(Math.random()*a.length)
  a=a[v]
  a=a.split('')
- for w<a.length
+ l=a.length
+ for w<l
   c=a[w].charCodeAt(0)>127
   if c>127 and c<256:
    c+=848
