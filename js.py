@@ -19,7 +19,7 @@ def fet(q,r=0):
   show('<button onclick="tlis();return false">начать</button>')
   })
  else:
-  if reqr:
+  if reqr==1:
    if r.status==404:
     show('файл '+reqq+'не найден')
    else:

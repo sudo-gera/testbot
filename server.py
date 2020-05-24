@@ -30,7 +30,11 @@ hostPort=9000
 hostName='localhost'
 class MyServer(BaseHTTPRequestHandler):
  def do_GET(self):
-  self.send_response(200)
+  try:
+   open(path,'rb')
+   self.send_response(200)
+  except:
+   self.send_response(404)
   path='.'+uqu(self.path).split('?')[0]
   path+='index.html' if path[-1]=='/' else ''
   self.send_header("Content-type", "text/html; charset=utf-8")
