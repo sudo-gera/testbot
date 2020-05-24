@@ -5,7 +5,12 @@ def show(q,e='main'):
 cont=''
 ranc=7
 dd=''
-def fet(q):
+reqq=''
+reqr=0
+def fet(q,r=0):
+ if r==0:
+  reqq=q
+ reqr=r
  e=''
  fetch(q).then(function(r){
  if r.ok:
@@ -14,8 +19,13 @@ def fet(q):
   show('<button onclick="tlis();return false">начать</button>')
   })
  else:
-  alert(r.status+' '+r.statusText)
-  cont=''
+  if reqr:
+   if r.status==404:
+    show('файл '+reqq+'не найден')
+   else:
+    show(r.status.toString())
+  else:
+   fet(reqq+'.csv',1)
  })
 def fran():
  if ranc:
@@ -34,7 +44,7 @@ show('''название теста:
 ''')
 def name_h():
  q=document.forms.tni.elements.tn.value
- a=fet('./'+q)
+ fet('./'+q)
  show('подожди')
 def tlis():
  a=cont.split('')
